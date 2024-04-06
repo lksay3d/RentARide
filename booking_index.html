@@ -1,0 +1,38 @@
+
+<!--include button on home page, to book a vehicle, make this
+the center of the page-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Booking</title>
+  <link rel="stylesheet" href="booking_styles.css">
+</head>
+<body>
+    <div class="container">
+      <img src="https://tinyurl.com/yu5aptkv" alt="Car Image" class="car-image">
+        <h2>Book a Vehicle</h2>
+        <form id="booking-form">
+          <label for="pickup-date">Pickup Date:</label>
+          <input type="date" id="pickup-date" name="pickup-date" required>
+    
+          <label for="return-date">Return Date:</label>
+          <input type="date" id="return-date" name="return-date" required>
+    
+          <label for="car-type">Car Type:</label>
+          <select id="car-type" name="car-type" required>
+            <option value="">Select Car Type</option>
+            <option value="compact">2020 Ford Pickup</option>
+            <option value="sedan">2018 Blue BMW Sedan</option>
+            <option value="suv">2019 White Jeep Wrangler</option>
+          </select>
+    
+          <input type="submit" value="Book Now" id = "submit-button">
+        </form>
+      </div>
+  <script src="booking_script.js"></script>
+</body>
+</html>
+
