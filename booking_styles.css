@@ -11,7 +11,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background:white;
+    background: linear-gradient(rgb(123, 185, 185), white);
+
 }
 .container{
     position: relative;
@@ -122,4 +123,20 @@ input {
 
 #car-type:hover option {
     display: none;
+}
+
+label {
+    display: table-row;
+    width: 50%;
+    margin-bottom: 10px;
+    color: white;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
