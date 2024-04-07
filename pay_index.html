@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Screen</title>
+    <link rel="stylesheet" href="pay_styles.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Billing Address Screen -->
+        <div id="billingAddressScreen">
+            <form id="paymentForm">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="title">Billing Address</h3>
+                        <div class="inputBox">
+                            <span>full name :</span>
+                            <input type="text" id="fullName">
+                        </div>
+                        <div class="inputBox">
+                            <span>address line 1 :</span>
+                            <input type="text" id="addressLine1">
+                        </div>
+                        <div class="inputBox">
+                            <span>address line 2 :</span>
+                            <input type="text" id="addressLine1">
+                        </div>
+                        <div class="inputBox">
+                            <span>city :</span>
+                            <input type="text" id="city">
+                        </div>
+                        <div class="flex">
+                            <div class="inputBox">
+                                <span>state :</span>
+                                <input type="text" id="state">
+                            </div>
+                            <div class="inputBox">
+                                <span>zip code :</span>
+                                <input type="text" id="zipCode">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h3 class="title">Payment</h3>
+                        <div class="inputBox">
+                            <span>cards accepted:</span>
+                            <img src = "/Users/brooklynlittle/Downloads/card_img.png" alt = "card images">
+
+                            <span>name on card :</span>
+                            <input type="text" id="cardName">
+                        </div>
+                        <div class="inputBox">
+                            <span>credit card number :</span>
+                            <input type="number" id="cardNumber">
+                        </div>
+                        <div class="inputBox">
+                            <span>exp month :</span>
+                            <input type="text" id="expMonth">
+                        </div>
+                        <div class="flex">
+                            <div class="inputBox">
+                                <span>exp year :</span>
+                                <input type="number" id="expYear">
+                            </div>
+                            <div class="inputBox">
+                                <span>CVV :</span>
+                                <input type="text" id="cvv">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" id="proceedToCheckoutButton" class="submit-btn">Proceed to Checkout</button>
+            </form>
+        </div>
+
+        <!-- Checkout Screen -->
+        <div id="checkoutScreen" style="display: none;">
+            <form id="checkoutForm">
+                <h3 class = "title">Checkout</h3>
+                <div class="row">
+                    <div class="col">
+                        <div class="inputBox">
+                            <span>Amount Due :</span>
+                            <input type="text" id="amount" value = "$100.000">
+                        </div>
+                        <button type="button" id="pay" class="pay-btn">Pay Now</button>
+        </div>
+    </div>
+    <script src="pay_script.js"></script>
+</body>
+
+</html>

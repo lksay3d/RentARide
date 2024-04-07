@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    font-family: 'Inter', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+  }
+  
+  .container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://tinyurl.com/4mhzu95v);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  .container form{
+    padding:20px;
+    width:700px;
+    background: rgba(123, 185, 185, 0.4);
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    color: white;
+    font-family: 'Intern';
+  }
+  
+  .container form .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:15px;
+  }
+  
+  .container form .row .col{
+    flex:1 1 250px;
+  }
+  
+  .container form .row .col .title{
+    font-size: 20px;
+    color:white;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+  }
+
+  .container form .title{
+    font-size: 20px;
+    color:white;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  .container form .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: rgb(123, 185, 185);
+    border-radius: 25px;
+  }
+
+  .container form .row .col .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: rgb(123, 185, 185);
+    border-radius: 25px;
+  }
+  
+  .container form .row .col .inputBox{
+    margin:15px 0;
+  }
+  
+  .container form .row .col .inputBox span{
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .container form .row .col .inputBox input{
+    width: 100%;
+    padding:10px 15px;
+    font-size: 15px;
+    text-transform: none;
+    background: transparent;
+    border-bottom: 2px solid whitesmoke;
+    border-top: 2px solid transparent;
+    
+  }
+  
+  .container form .row .col .inputBox input:focus{
+    border:2px solid  rgb(123, 185, 185);
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+  }
+  
+  .container form .row .col .flex{
+    display: flex;
+    gap:15px;
+  }
+  
+  .container form .row .col .flex .inputBox{
+    margin-top: 5px;
+  }
+  
+  .container form .row .col .inputBox img{
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 18.2px;
+    
+    
+  }
+  
+  .container form .submit-btn{
+    width: 100%;
+    padding:12px;
+    font-size: 17px;
+    background: transparent;
+    color:white;
+    margin-top: 5px;
+    cursor: pointer;
+    
+  }
+  
+  .container form .pay-btn:hover{
+    background:rgb(123, 185, 185);
+  }
+
+  .container form .pay-btn{
+    width: 100%;
+    padding:12px;
+    font-size: 17px;
+    background: transparent;
+    color:white;
+    margin-top: 5px;
+    cursor: pointer;
+    
+  }
+  
+  .container form .submit-btn:hover{
+    background:rgb(123, 185, 185);
+  }
+
+
+
+/*
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://tinyurl.com/4mhzu95v);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.container{
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container form{
+    padding: 20px;
+    width:700px;
+    background: white;
+    
+}
+
+.container form .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.container form .row .col .title {
+    font-size: 20px;
+    color:rgb(123, 185, 185);
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.container form .row .col .inputBox span {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.container form .row .col .inputBox input {
+    width: 100%;
+    border-bottom: 2px solid whitesmoke;
+    border-top: 2px solid transparent;
+    background-color: transparent;
+
+}
