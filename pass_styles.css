@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://tinyurl.com/4mhzu95v);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.container{
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgba(123, 185, 185, 0.4);
+    color: white;
+    padding: 30px 30px 20px;
+    font-family: 'Inter';
+}
+
+h1 {
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+    font-family: 'Inter';
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+}
+
+h1::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: rgb(123, 185, 185);
+    border-radius: 25px;
+}
+
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: transparent;
+    margin-top: 20px;
+    
+}
+
+.input-wrapper input {
+    width: 100%; 
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    background: transparent;
+    border-bottom: 2px solid whitesmoke;
+    border-top: 2px solid transparent;
+   
+}
+
+.input-wrapper input:focus {
+    outline: none; 
+    border-bottom-color:rgb(123, 185, 185);
+}
+
+.input-wrapper button {
+    padding: 12px 150px;
+    text-align: center;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 20px;
+    font-size: 17px;
+   
+   
+}
+
+.input-wrapper button:hover {
+    background-color: rgb(123, 185, 185);
+    color: white;
+}
+
+.login-link {
+    font-size: smaller;
+    color: white;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+.input-wrapper input::placeholder {
+    font-size: 14px; 
+}
+
+

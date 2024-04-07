@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Recovery</title>
+  <link rel="stylesheet" href="pass_styles.css">
+ 
+</head>
+<body>
+  <div class="container">
+    <h1>Password Recovery</h1>
+    <div id="email">
+      <p>Please enter your email</p>
+      <div class="input-wrapper">
+        <input type="email" id="emailInput" placeholder="Enter your email">
+        <button class="button-wrapper" onclick="validateEmail()">Next</button>
+      </div>
+    </div>
+    <div id="securityQuestions" style="display: none;">
+      <div id="securityQuestion1" style="display: none;">
+        <p>What is your mother's maiden name?</p>
+        <div class="input-wrapper">
+          <input type="text" id="securityAnswer1" placeholder="Enter your answer">
+          <button class="button-wrapper" onclick="validateSecurityAnswer(1)">Next</button>
+        </div>
+      </div>
+      <div id="securityQuestion2" style="display: none;">
+        <p>What city were you born in?</p>
+        <div class="input-wrapper">
+          <input type="text" id="securityAnswer2" placeholder="Enter your answer">
+          <button class="button-wrapper" onclick="validateSecurityAnswer(2)">Next</button>
+        </div>
+      </div>
+      <div id="securityQuestion3" style="display: none;">
+        <p>What is the name of your first pet?</p>
+        <div class="input-wrapper">
+          <input type="text" id="securityAnswer3" placeholder="Enter your answer">
+          <button class="button-wrapper" onclick="validateSecurityAnswer(3)">Next</button>
+        </div>
+      </div>
+    </div>
+    <div id="recoverPass" style="display: none;">
+      <p>Enter new password</p>
+      <div class="input-wrapper">
+        <input type="password" id="passwordInput" placeholder="Enter new password">
+        <button class="button-wrapper" onclick="recoverPassword()">Recover Password</button>
+      </div>
+    </div>
+    <div id="successMessage" style="display: none;">
+      <p>Password successfully recovered!</p>
+    </div>
+    <div class="input-wrapper">
+      <a href="login_index.html" class="login-link">Back to Login</a> <!-- Added link to the login page -->
+    </div>
+  </div>
+
+  <script src="pass_script.js"></script>
+</body>
+</html>
+
