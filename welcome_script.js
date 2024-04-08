@@ -1,3 +1,26 @@
+// Mediator object
+//mediator used to control button and menu
+const Mediator = {
+  menuToggle: document.querySelector('.toggle'),
+  showcase: document.querySelector('.showcase'),
+
+
+  init: function() {
+    this.menuToggle.addEventListener('click', this.handleMenuToggle.bind(this));
+  },
+
+  handleMenuToggle: function() {
+    this.menuToggle.classList.toggle('active');
+    this.showcase.classList.toggle('active');
+  }
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+  Mediator.init();
+});
+
+
+/*
 const menuToggle = document.querySelector('.toggle');
       const showcase = document.querySelector('.showcase');
 
@@ -5,8 +28,9 @@ const menuToggle = document.querySelector('.toggle');
         menuToggle.classList.toggle('active');
         showcase.classList.toggle('active');
       })
+*/
 
-
+/*
 document.getElementById("explore-button").addEventListener("click", function(){
     window.location.href = "booking_index.html";
 });
@@ -24,5 +48,5 @@ document.addEventListener("DOMContentLoaded", function() {
       window.location.href = "your_page_url.html";
   });
 });
-
+*/
 
