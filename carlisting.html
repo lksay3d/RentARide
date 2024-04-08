@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <form id="carForm">
+    <form id="carForm" class="container">
         <h2>Create/Edit Car Listing</h2>
         <input type="text" id="make" placeholder="Make" required>
         <input type="text" id="model" placeholder="Model" required>
@@ -17,9 +17,9 @@
         <button type="button" onclick="submitForm()">Submit</button>
     </form>
 
-    <div id = "carListings">
-        <h2>Car Listings</h2>
-        <ul id="Listings"></ul>
+    <div id = "carListings" class="container">
+        <h2>Current Car Listings</h2>
+        <ul id="listings"></ul>
     </div>
 
     <script src="carlisting.js"></script>

@@ -44,7 +44,6 @@ function submitForm() {
                             .build();
 
     console.log(carListing);
-    // Here, you'd typically send the carListing to your backend server or manipulate it as needed.
     alert(`Car Listing Created: ${make} ${model} (${year}) at $${price}/day`);
 
     carListings.push(carListing);
@@ -57,7 +56,7 @@ function submitForm() {
         carListings.forEach((listing, index) => {
             const li = document.createElement('li');
 
-            li.textContent = '${listing.make} ${listing.model} (${listing.year}) - $${listing.price}/day';
+            li.textContent = `${listing.make} ${listing.model} (${listing.year}) - $${listing.price}/day`;
 
             const editButton = document.createElement('button');
 
@@ -78,7 +77,7 @@ function submitForm() {
         document.getElementById('model').value = listing.model;
         document.getElementById('year').value = listing.year;
         document.getElementById('price').value = listing.price;
-        
+
     }
 
 }
