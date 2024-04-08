@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Screen</title>
+  <link rel="stylesheet" href="write_review_styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>User Reviews</h1>
+    <div class="car-details">
+      <h2>Car Details</h2>
+      <p><strong>Make:</strong> BMW</p>
+      <p><strong>Year:</strong> 2018</p>
+      <!-- Add more details as needed -->
+   
+      <!-- Existing reviews will be added here -->
+    
+  <div class="modal" id="review-modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Leave a Review</h2>
+      <form id="review-form">
+        <textarea id="review-text" placeholder="Write your review here..." required></textarea>
+        <div class="rating">
+          <p>Your Rating:</p>
+          <div class="stars">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+        </div>
+        
+        <button type="button" id="return-to-reviews">Return to Reviews</button>
+      </form>
+    </div>
+  </div>
+  <script src="write_review_script.js"></script>
+</body>
+</html>

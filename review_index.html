@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Screen</title>
+  <link rel="stylesheet" href="review_styles.css">
+</head>
+<body>
+    <div class="container">
+      <h1>User Reviews</h1>
+      <div class="car-details">
+        <h2>Car Details</h2>
+        <p><strong>Make:</strong> BMW</p>
+        <p><strong>Year:</strong> 2018</p>
+        <!-- Add more details as needed -->
+      </div>
+      <div class="reviews">
+        <h2>User Reviews</h2>
+        <div class="review" data-rating="4">
+          <div class="user-info">
+            <img src="https://tinyurl.com/4kxx7cwa" alt="User Avatar">
+            <p><strong>John Doe</strong></p>
+          </div>
+          <p class="review-text">Amazing car and owner. Would rent again.</p>
+          <div class="rating">
+            <p>Rating:</p>
+            <div class="stars">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+            <p class="rating-message"></p>
+          </div>
+        </div>
+        <div class="review" data-rating="3">
+          <div class="user-info">
+            <img src="https://tinyurl.com/4kxx7cwa" alt="User Avatar">
+            <p><strong>Jane Smith</strong></p>
+          </div>
+          <p class="review-text">Wow.</p>
+          <div class="rating">
+            <p>Rating:</p>
+            <div class="stars">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+            </div>
+            <p class="rating-message"></p>
+          </div>
+        </div>
+        <!-- Add more reviews as needed -->
+      </div>
+      <div class="review" data-rating="4">
+        <div class="user-info">
+          <img src="https://tinyurl.com/4kxx7cwa" alt="User Avatar">
+          <p><strong>Ron Johnson</strong></p>
+        </div>
+        <p class="review-text">Good experience.</p>
+        <div class="rating">
+          <p>Rating:</p>
+          <div class="stars">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9734;</span>
+          </div>
+          <p class="rating-message"></p>
+        </div>
+      </div>
+      </div>
+      <button class="leave-review-btn">Leave Review</button>
+    </div>
+  <script src="review_script.js"></script>
+</body>
+</html>
