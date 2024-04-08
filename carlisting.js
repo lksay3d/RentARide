@@ -1,3 +1,5 @@
+//Leia Kamal Sayed
+
 class CarBuilder {
     constructor(make, model) {
         this.make = make;
@@ -9,7 +11,7 @@ class CarBuilder {
 
     setYear(year) {
         this.year = year;
-        return this; // Return the object itself for chaining
+        return this;
     }
 
     setPrice(price) {
@@ -98,8 +100,18 @@ function initDefaultCars(){
     displayCarListings();
 }
 
-document.addEventListener('DOMContentLoaded', initDefaultCars);
+document.addEventListener('DOMContentLoaded', function() {
+    initDefaultCars();
 
+    const inputs = document.querySelectorAll('#carForm input');
+    inputs.forEach(input => {
+        input.addEventListener('input', () => {
+            if(input.value.trim() !== '') {
+                input.classList.remove('invalid-input');
+            }
+        });
+    });
+});
 
 function submitForm() {
     const make = document.getElementById('make').value;
@@ -108,6 +120,28 @@ function submitForm() {
     const price = document.getElementById('price').value;
     const color = document.getElementById('color').value;
     
+    let isValid = true;
+
+    function validateInput(inputElement){
+        if(!inputElement.value){
+            inputElement.classList.add('invalid-input');
+            isValid = false;
+        }
+        
+        else{
+            inputElement.classList.remove('invalid-input');
+        }
+    }
+
+    validateInput(document.getElementById('make'));
+    validateInput(document.getElementById('model'));
+    validateInput(document.getElementById('year'));
+    validateInput(document.getElementById('price'));
+    validateInput(document.getElementById('color'));
+
+    if(!isValid){
+        return;
+    }
 
     if(editMode){
         const listing = carListings[editIndex];

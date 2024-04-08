@@ -1,3 +1,5 @@
+/* Leia Kamal Sayed */
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -75,3 +77,6 @@ button:hover {
     max-width: 600px;
 }
 
+.invalid-input{
+    border: 2px solid red;
+}
