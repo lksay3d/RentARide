@@ -100,19 +100,6 @@ function initDefaultCars(){
     displayCarListings();
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    initDefaultCars();
-
-    const inputs = document.querySelectorAll('#carForm input');
-    inputs.forEach(input => {
-        input.addEventListener('input', () => {
-            if(input.value.trim() !== '') {
-                input.classList.remove('invalid-input');
-            }
-        });
-    });
-});
-
 function submitForm() {
     const make = document.getElementById('make').value;
     const model = document.getElementById('model').value;
@@ -123,7 +110,7 @@ function submitForm() {
     let isValid = true;
 
     function validateInput(inputElement){
-        if(!inputElement.value){
+        if(!inputElement.value.trim()){
             inputElement.classList.add('invalid-input');
             isValid = false;
         }
@@ -165,9 +152,21 @@ function submitForm() {
         carListings.push(carListing);
     }
 
-    document.getElementById('submit-button').addEventListener('click', submitForm);
-
     displayCarListings();
 
     clearForm();
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    initDefaultCars();
+    document.getElementById('submit-button').addEventListener('click', submitForm);
+
+    const inputs = document.querySelectorAll('#carForm input');
+    inputs.forEach(input => {
+        input.addEventListener('input', () => {
+            if(input.value.trim() !== '') {
+                input.classList.remove('invalid-input');
+            }
+        });
+    });
+});
