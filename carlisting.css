@@ -1,7 +1,11 @@
 /* Leia Kamal Sayed */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 
 body {
-    font-family: Arial, sans-serif;
+    background: linear-gradient(rgb(159, 204, 204), white);
+    font-family: 'Inter';
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,7 +13,7 @@ body {
 }
 
 form {
-    background-color: #f3f3f3;
+    background-color:rgba(123, 185, 185, 0.4);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -29,21 +33,26 @@ input[type="number"] {
 }
 
 button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 15px;
+    background-color: rgb(123, 185, 185);
+    color: #fff;
     border: none;
-    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
     cursor: pointer;
+    align-self: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: white;
+    color: rgb(123,185,185);
 }
 
 #carListings {
     margin-top: 30px;
-    background-color: #f9f9f9;
+    background-color:rgba(123, 185, 185, 0.4);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.05);
