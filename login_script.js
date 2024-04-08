@@ -1,3 +1,5 @@
+// Brooklyn Little
+
 document.addEventListener('DOMContentLoaded', function() {
     const container = document.querySelector(".container");
     const pwShowHide = document.querySelectorAll(".showHidePw");

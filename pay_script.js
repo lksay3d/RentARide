@@ -1,3 +1,5 @@
+//Brooklyn Little
+
 const form = document.getElementById('paymentForm');
         form.addEventListener('submit', function (event) {
             event.preventDefault();

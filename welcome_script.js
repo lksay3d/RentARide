@@ -1,3 +1,5 @@
+//Brooklyn Little
+
 // Mediator object
 //mediator used to control button and menu
 const Mediator = {
