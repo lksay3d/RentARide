@@ -31,6 +31,8 @@ class CarListing {
 }
 
 let carListings = [];
+let editMode = false;
+let editIndex = -1;
 
 function submitForm() {
     const make = document.getElementById('make').value;
@@ -38,15 +40,26 @@ function submitForm() {
     const year = document.getElementById('year').value;
     const price = document.getElementById('price').value;
 
-    const carListing = new CarBuilder(make, model)
-                            .setYear(year)
-                            .setPrice(price)
-                            .build();
+    if(editMode){
+        const listing = carListings[editIndex];
 
-    console.log(carListing);
-    alert(`Car Listing Created: ${make} ${model} (${year}) at $${price}/day`);
+        listing.make = make;
+        listing.model = model;
+        listing.year = year;
+        listing.price = price;
 
-    carListings.push(carListing);
+        editMode = false;
+        editIndex = -1;
+    }
+
+    else{
+        const carListing = new CarBuilder(make, model)
+                                .setYear(year)
+                                .setPrice(price)
+                                .build();
+        carListings.push(carListing);
+    }
+    
     displayCarListings();
 
     clearForm();
@@ -81,6 +94,9 @@ function submitForm() {
     }
 
     function editListing(index){
+        editMode = true;
+        editIndex = index;
+
         const listing = carListings[index];
 
         document.getElementById('make').value = listing.make;
