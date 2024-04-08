@@ -14,6 +14,19 @@ body {
     min-height: 100vh;
 }
 
+.home {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  padding: 20px;
+  }
+  .home img {
+  width: 40px;
+  height: auto;
+  }
+  
+
 .review {
     border: 1px solid #ccc;
     padding: 20px;
