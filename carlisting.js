@@ -75,6 +75,9 @@ function submitForm() {
         const listing = carListings[index];
 
         document.getElementById('make').value = listing.make;
+        document.getElementById('model').value = listing.model;
+        document.getElementById('year').value = listing.year;
+        document.getElementById('price').value = listing.price;
         
     }
 
