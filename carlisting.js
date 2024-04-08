@@ -119,7 +119,7 @@ function submitForm() {
     const year = document.getElementById('year').value;
     const price = document.getElementById('price').value;
     const color = document.getElementById('color').value;
-    
+
     let isValid = true;
 
     function validateInput(inputElement){
@@ -164,6 +164,8 @@ function submitForm() {
                                 .build();
         carListings.push(carListing);
     }
+
+    document.getElementById('submit-button').addEventListener('click', submitForm);
 
     displayCarListings();
 

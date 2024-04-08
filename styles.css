@@ -24,6 +24,10 @@ input[type="number"] {
     border-radius: 4px;
 }
 
+.invalid-input{
+    border: 6px solid red;
+}
+
 button {
     background-color: #007bff;
     color: white;
@@ -75,8 +79,4 @@ button:hover {
 .container{
     width: 80%;
     max-width: 600px;
-}
-
-.invalid-input{
-    border: 2px solid red;
 }
