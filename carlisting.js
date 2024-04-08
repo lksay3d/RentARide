@@ -49,6 +49,8 @@ function submitForm() {
     carListings.push(carListing);
     displayCarListings();
 
+    clearForm();
+
     function displayCarListings(){
         const listingsElement = document.getElementById('listings');
         listingsElement.innerHTML = '';
@@ -68,6 +70,14 @@ function submitForm() {
             listingsElement.appendChild(li);
 
         });
+    }
+
+    function clearForm(){
+        document.getElementById('make').value = '';
+        document.getElementById('model').value = '';
+        document.getElementById('year').value = '';
+        document.getElementById('price').value = '';
+        
     }
 
     function editListing(index){
