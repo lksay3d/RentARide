@@ -30,6 +30,8 @@ class CarListing {
     }
 }
 
+let carListings = [];
+
 function submitForm() {
     const make = document.getElementById('make').value;
     const model = document.getElementById('model').value;
@@ -44,4 +46,36 @@ function submitForm() {
     console.log(carListing);
     // Here, you'd typically send the carListing to your backend server or manipulate it as needed.
     alert(`Car Listing Created: ${make} ${model} (${year}) at $${price}/day`);
+
+    carListings.push(carListing);
+    displayCarListings();
+
+    function displayCarListings(){
+        const listingsElement = document.getElementById('listings');
+        listingsElement.innerHTML = '';
+
+        carListings.forEach((listing, index) => {
+            const li = document.createElement('li');
+
+            li.textContent = '${listing.make} ${listing.model} (${listing.year}) - $${listing.price}/day';
+
+            const editButton = document.createElement('button');
+
+            editButton.textContent = 'Edit';
+            editButton.onclick = () => editListing(index);
+
+            li.appendChild(editButton);
+
+            listingsElement.appendChild(li);
+
+        });
+    }
+
+    function editListing(index){
+        const listing = carListings[index];
+
+        document.getElementById('make').value = listing.make;
+        
+    }
+
 }

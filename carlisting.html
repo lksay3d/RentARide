@@ -6,6 +6,7 @@
     <title>Car Rental Listing</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <form id="carForm">
         <h2>Create/Edit Car Listing</h2>
@@ -15,6 +16,11 @@
         <input type="number" id="price" placeholder="Price per day" required>
         <button type="button" onclick="submitForm()">Submit</button>
     </form>
+
+    <div id = "carListings">
+        <h2>Car Listings</h2>
+        <ul id="Listings"></ul>
+    </div>
 
     <script src="carlisting.js"></script>
 </body>
