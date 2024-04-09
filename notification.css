@@ -30,6 +30,7 @@ body, html {
     padding: 20px;
     margin: 20px;
     box-sizing: border-box;
+    flex-direction: column;
 }
 
 .message-list {
@@ -38,6 +39,12 @@ body, html {
     border: 1px solid #ccc;
     overflow-y: scroll;
     margin-bottom: 10px;
+}
+
+.inbox-heading {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #333;
 }
 
 #messageInput {
