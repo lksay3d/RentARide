@@ -65,29 +65,3 @@ class PaymentProxy {
         console.log('Processing payment..');
     }
 }
-
-/*
-function handlePayment() {
-    const paymentProxy = new PaymentProxy();
-    paymentProxy.processPayment();
-}
-
-class PaymentProxy {
-    processPayment() {
-        console.log('Processing payment..');
-    }
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    const proceedToCheckoutButton = document.getElementById('proceedToCheckoutButton');
-    proceedToCheckoutButton.addEventListener('click', showCheckoutScreen);
-});
-
-function showCheckoutScreen() {
-    // Hide the billing address screen
-    document.getElementById('billingAddressScreen').style.display = 'none';
-    // Show the checkout screen
-    document.getElementById('checkoutScreen').style.display = 'block';
-}
-
-*/
