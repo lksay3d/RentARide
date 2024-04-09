@@ -55,6 +55,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             return SessionManager.instance;
         }
+        static getInstance() {
+            return new SessionManager();
+        }
 
         loginUser(user) {
             this.loggedInUser = user;
