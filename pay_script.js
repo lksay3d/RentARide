@@ -44,24 +44,34 @@ function showCheckoutScreen() {
     document.getElementById('checkoutScreen').style.display = 'block';
 }
 
-function handlePaymentButtonClick() {
-    // Set amount to zero
-    document.getElementById('amount').value = '$0.00';
-
-    // Call proxy object to handle payment
-    handlePayment();
-
-    // send message
-   alert('Payment Completed');
+// Define a PaymentService interface
+class PaymentService {
+    processPayment() {}
 }
 
-function handlePayment() {
-    const paymentProxy = new PaymentProxy();
-    paymentProxy.processPayment();
-}
-
-class PaymentProxy {
+// RealSubject class implementing the PaymentService interface
+// Real payment is processPayment after the security operations
+class RealPaymentService extends PaymentService {
     processPayment() {
         console.log('Processing payment..');
+       
     }
 }
+
+// Proxy class implementing the PaymentService interface
+class PaymentProxy extends PaymentService {
+    constructor() {
+        super();
+        this.realPaymentService = new RealPaymentService();
+    }
+
+    processPayment() {
+        // Perform any security operations before delegating to the real payment service
+        console.log('Performing security checks before processing payment..');
+        this.realPaymentService.processPayment();
+    }
+}
+
+// using the proxy
+const paymentProxy = new PaymentProxy();
+paymentProxy.processPayment();
