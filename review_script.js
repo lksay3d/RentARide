@@ -51,38 +51,3 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-
-
-/*
-document.addEventListener("DOMContentLoaded", function() {
-    const reviews = document.querySelectorAll(".review");
-    reviews.forEach(review => {
-      const rating = parseInt(review.dataset.rating);
-      const ratingMessage = review.querySelector(".rating-message");
-      rate(rating, ratingMessage);
-    });
-  });
-  
-  function rate(rating, ratingMessage) {
-    highlightStars(rating, ratingMessage);
-  }
-  
-  function highlightStars(count, ratingMessage) {
-    const stars = ratingMessage.previousElementSibling.querySelectorAll(".star");
-    stars.forEach((star, index) => {
-      if (index < count) {
-        star.classList.add("active");
-      } else {
-        star.classList.remove("active");
-      }
-    });
-  }
-
-  document.addEventListener("DOMContentLoaded", function() {
-    const leaveReviewBtn = document.querySelector(".leave-review-btn");
-    leaveReviewBtn.addEventListener("click", function() {
-      window.location.href = "write_review_index.html"; 
-    });
-  });
-  */
-  
