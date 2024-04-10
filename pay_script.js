@@ -75,3 +75,13 @@ class PaymentProxy extends PaymentService {
 // using the proxy
 const paymentProxy = new PaymentProxy();
 paymentProxy.processPayment();
+
+
+function handlePaymentButtonClick() {
+    // Set amount to zero
+    document.getElementById('amount').value = '$0.00';
+    alert("Payment Complete");
+    // Call proxy object to handle payment
+    handlePayment();
+  
+}
